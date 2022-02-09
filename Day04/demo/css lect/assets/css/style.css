@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body {
+  width: 960px;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+img, video {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #F1D00A;
+  background: transparent;
+  font-size: 14px;
+
+  transition: all 350ms ease-in-out;
+}
+
+.btn:hover {
+  border: none;
+  background: #F1D00A;
+  color: #222;
+}
+
+.logo {
+  width: 50px;
+  /* height: 50px; */
+  /* object-fit: cover; */
+  /* border: 1px solid #000;
+  padding: 10px;
+  margin: 10px; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  justify-content: space-between;
+}
+
+header nav a {
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  transition: all 350ms ease-out;
+}
+
+header nav a:hover {
+  color: #F76E11;
+}
+
+.hero {
+  /* position: sticky;
+  top: 0px; */
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+  height: 500px;
+  align-items: center;
+}
+
+.hero-content {
+  width: 300px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+}
+
+.services {
+  display: flex;
+  gap: 30px;
+}
+
+.team {
+  display: flex;
+  text-align: center;
+  gap: 30px ;
+  justify-content: space-around;
+}
+
+.team-memeber img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.products {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  height: 430px;
+}
+
+.card-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge {
+  background: #FC4F4F;
+  color: #fff;
+  width: 70px;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  right: -15px;
+
+  transform: rotate(-45deg);
+  border-radius: 8px;
+}
+.card-header img {
+  transition: all 350ms ease;
+}
+.card:hover img {
+  transform: scale(1.2) rotate(3deg);
+}
+
+footer {
+  /* text-align: center; */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mask {
+  mask: url(../img/mask.svg) center center / cover no-repeat;
+  -webkit-mask: url(../img/mask.svg) center center / cover no-repeat;
+}
+
+
+@media only screen and (max-width: 600px) and (min-width: 1024px) {
+  header nav, .hero-img {
+    display: none;
+  }
+
+  .hero, .about {
+    grid-template-columns: 1fr;
+  }
+
+  .services, .team, .products {
+    flex-direction: column;
+  }
+}
