@@ -6,9 +6,13 @@
 characters (no numbers and symbols) and it should end with capital A else return false */
 
 function capitalA(s){
-    // Add your logic.
-    return;
+    // Add your logic
+    let pattern = /A$/;
+    let result = pattern.test(s);
+    return result;
 }
+   
+
 
 
 /* Write a function that take a string and return true if the the sting is following the emails pattern
@@ -16,7 +20,10 @@ which end with io (example@example.io) */
 
 function ioEmail(email){
     // Add your logic.
-    return;
+    let pattern = /example@example.io$/;
+        let result = pattern.test(email);
+        return result;
+    
 }
 
 /* You have a text that contain image names with their extention you need to write a function to 
@@ -29,7 +36,17 @@ required extention are jpg, jpeg and png.
 function imagesSearcher(text){
     let arr = [];
     // Add your logic.
-    return arr
+   
+    let pattern = /[a-z]+.png|[a-z]+.jpg|[a-z]+.jpeg/g;
+    let result = text.match(pattern);
+
+    if (result != null) {
+        for (let i = 0; i < result.length; i++) {
+            arr[i] = result[i]
+        }
+    }
+
+    return arr;
 }
 
 
