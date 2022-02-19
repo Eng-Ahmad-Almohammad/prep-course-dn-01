@@ -2,7 +2,7 @@
 
 function division(number, dividedBy){
     // Write you logic here.
-    // let result =  number / dividedBy
+    
     
    
 }
