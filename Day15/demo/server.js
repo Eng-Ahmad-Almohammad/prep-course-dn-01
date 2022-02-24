@@ -24,7 +24,12 @@ const DATABASE_URL = process.env.DATABASE_URL;
 
 
 // Initialize the connection
-const client = new pg.Client(DATABASE_URL);
+// const client = new pg.Client(DATABASE_URL);
+
+const client = new pg.Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
+});
 
 // Constructor to format the data as I want 
 function Recipe(id, title, readyInMinutes, vegetarian,  sourceUrl, image, summary, instructions){
