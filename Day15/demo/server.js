@@ -1,6 +1,8 @@
 'use strict';
 // Get express from node model
 const express = require("express");
+
+const cors = require("cors");
 // read data from JSON file
 const recipes = require("./data.json");
 // Read .env file
@@ -11,12 +13,14 @@ const axios = require("axios");
 const pg = require("pg");
 
 
+
 // start(configure) the dotenv
 dotenv.config();
 
 // initializing my server
 const app = express();
 
+app.use(cors())
 // Variables that live in my .env file
 const APIKEY = process.env.APIKEY;
 const PORT = process.env.PORT;
