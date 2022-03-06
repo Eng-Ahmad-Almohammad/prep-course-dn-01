@@ -21,7 +21,7 @@ export default function Home(){
         <>
         <h1>From Home Page</h1>
         <Header />
-        <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-between", height:"100px"}}>
+        <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-evenly", height:"100px"}}>
         {recipes && <RecipesList recipes={recipes}/>}
         </div>
         </>

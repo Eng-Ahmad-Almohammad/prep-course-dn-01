@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import RecipeModal from "./Modal"
-import {useState} from 'react';
+import {useState} from 'react'
 
 let RecipesList = ({recipes}) => {
     const [chosenRecipe, setChosenRecipe] = useState()
@@ -26,7 +26,7 @@ let RecipesList = ({recipes}) => {
                     <Card.Body>
                       <Card.Title> Title: {recipe.title}</Card.Title>
                       <Card.Title>It will be ready in:{recipe.readyInMinutes}</Card.Title>
-                      <Card.Text>
+                      <Card.Text style={{overflowY: "scroll", maxHeight:"100px"}}>
                         {recipe.summary}
                       </Card.Text>
                       <Button variant="primary" onClick={() => handelChosenRecipe(recipe)}>Add to Fav</Button>
