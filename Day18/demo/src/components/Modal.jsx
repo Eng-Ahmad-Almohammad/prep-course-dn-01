@@ -11,7 +11,7 @@ export default function RecipeModal({ recipe, show, handleClose }) {
         <Modal.Title>{recipe.title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>{recipe.instructions}</Modal.Body>
-      <Form onSubmit={handelFormSubmit} style={{margin: "0 10px"}}>
+      <Form style={{margin: "0 10px"}}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Comment</Form.Label>
             <Form.Control name="comment" type="text" placeholder="Enter Comment" />
